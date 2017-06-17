@@ -1,0 +1,229 @@
+.fadeIn{
+	animation: fadeIn 1.5s ease-in;
+	-webkit-animation: fadeIn 1.5s ease-in;		
+	display: block !important;	
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+.fadeOut{
+	animation: fadeOut 1.5s ease-in;
+	-webkit-animation: fadeOut 1.5s ease-in;		
+	display: none !important;	
+}
+
+@keyframes fadeOut {
+	0% {
+		transform: scale(1);
+		opacity: 1;		
+	}	
+	100% {
+		transform: scale(0);
+		opacity: 0.0;	
+	}		
+}
+ul {
+	list-style-type: none;
+}
+#transform:hover {
+    width: 200px;
+    height: 100px;
+    line-height: 50px;
+    background-color: blue;
+    /* Rotate div */
+    -ms-transform: rotate(150deg);
+    /* IE 9 */
+    -webkit-transform: rotate(150deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(150deg);
+}
+#transition {
+    width: 200px;
+    height: 100px;
+    line-height: 25px;
+    background: red;
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: width, height, background-color;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: linear;
+    /* Standard syntax */
+    transition-property: width, height, background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#transition:hover {
+    width: 300px;
+    height: 150px;
+    line-height: 75px;
+    background-color: orange;
+}
+@keyframes resize {
+    0% {
+        padding: 0;
+        background-color: pink;
+    } 50% {
+        padding: 20px 20px;
+        background-color: lightblue;
+    } 100% {
+        padding: 50px 50px;
+        background-color: green;
+    }
+}
+#box:hover {
+    animation: resize;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#box {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#transform
+, #transition
+, #box
+, #joeseph
+, #dynamic {
+    text-align: center;
+    margin: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#transform {
+    width: 200px;
+    height: 100px;
+    line-height: 50px;
+    background-color: #add8e6;
+}
+
+#joeseph {
+    text-align: left;
+    width: 600px;
+    line-height: 14pt;
+    height: 140px;
+    border-color: black;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 5px;
+}
+
+ul {
+    text-decoration: none;
+}
+
+#css
+, #ajax
+, #local
+, #blend
+ , #dynamic {
+    display: none;
+}
+
+// JS Objects
+div #blend {
+    text-align: center;
+    font-family: arial;
+    color: #339933;
+}
+
+#blend div {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#blend div .chosen {
+    outline: none;
+    border-color: #339933;
+    box-shadow: 0 0 10px #339933;
+}
+
+#blend div i {
+    font-size: 8pt;
+}
+
+#blend-btn {
+    padding: 10px;
+    margin: 10px auto;
+}
+
+#CIT261 div {
+    text-align: center;
+}
+
+// Blend Styling
+#blend div h3
+, #blend div
+, #blend div p
+, #blend div div {
+    text-align: center;
+    font-family: arial;
+    background-color: #000;
+    color: #393;
+}
+#blend div button {
+    margin: auto;
+    line-height: 12px;
+    padding: 3px 7px;
+}
+#wins {
+    color: #0F0;
+}
+#ties {
+    color: #00F;
+}
+#losses {
+    color: #F00;
+}
+#blend div hr {
+    margin: 25px 0;
+    height: 2.5px;
+    border-color: white;
+    background: gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #034));
+    background: -moz-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #034));
+    background: -o-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #034));
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #034));
+}
+@-webkit-keyframes greenPulse {
+    from {
+        background-color: #749a02;
+        box-shadow: 0 0 18px #333;
+        -moz-box-shadow: 0 0 18px #333;
+        -o-box-shadow: 0 0 18px #333;
+        -webkit-box-shadow: 0 0 18px #333;
+    }
+    50% {
+        background-color: #91bd09;
+        box-shadow: 0 0 36px #91bd09;
+        -moz-box-shadow: 0 0 36px #91bd09;
+        -o-box-shadow: 0 0 36px #91bd09;
+        -webkit-box-shadow: 0 0 36px #91bd09;
+    }
+    to {
+        background-color: #749a02;
+        box-shadow: 0 0 18px #333;
+        -moz-box-shadow: 0 0 18px #333;
+        -o-box-shadow: 0 0 18px #333;
+        -webkit-box-shadow: 0 0 18px #333;
+    }
+}
+button:hover
+, button .chosen {
+    animation: greenPulse 2s infinite;
+    -moz-animation: greenPulse 2s infinite;
+    -o-animation: greenPulse 2s infinite;
+    -webkit-animation: greenPulse 2s infinite;
+}

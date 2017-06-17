@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This is a page full of learning examples that will become progressively more complex for CIT261 by Christopher S. Sworen">
+    <meta name="author" content="Christopher S. Sworen">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <title>CIT261 Portfolio - C§</title>
+    <!-- Custom styles for CIT261 examples -->
+    <link href="css/cit261.css" rel="stylesheet">
+    <link href="css/calendar.css" rel="stylesheet">
+  </head>
+<div class="container" id="CIT261">
+    <div id="menu">
+        <h2>Menu Items:</h2>
+        <p>Each will utilize DOM manipulations...</p>
+        <button type="button" onclick="local()">Show Me Local Storage</button>
+        &nbsp;
+        <button type="button" onclick="css()">Show Me CSS Trans & Anims</button>
+        &nbsp;
+        <button type="button" onclick="ajax()">Show Me AJAX/JSON</button>
+        &nbsp;
+        <button type="button" onclick="dynamic()">Show Me The Calendar</button>
+        <br/>
+        <button type="button" id="blend-btn" onclick="blend()">Show Me A Blend</button>
+    </div>
+    <div id="local">
+        <h2>Using Local Storage and JS Objects for DOM Manipulation</h2>
+        <div id="joeseph"></div>
+        <br>
+        <button type="button" onclick="joesephAddAge()">Increase Age</button>
+        &nbsp;
+        <button type="button" onclick="joesephStore()">Store Joeseph</button>
+        &nbsp;
+        <button type="button" onclick="joesephGet()">Get Joeseph</button>
+        &nbsp;
+        <button type="button" onclick="joesephResetAge()">Reset Age</button>
+    </div>
+    <br>
+    <div id="css">
+        <h2>CSS Transformations</h2>
+        <div id="transform">Click this div to watch it transform &#40;rotate&#41;</div>
+        <br>
+        <h2>CSS Transitions</h2>
+        <div id="transition">Click this div to watch it &#40;transition&#41; change size and color</div>
+        <br>
+        <h2>CSS Animations</h2>
+        <div id="animation" class="hover">
+            <button id="box" class="shadow">Click to (animate) pulse</button>
+        </div>
+    </div>
+    <div id="ajax">
+        <h2>Using AJAX for DOM Manipulation</h2>
+        <h3>To Do List:</h3>
+        <div id="todo"></div>
+		<button id="updateList" type="button" onclick="updateList()">Update List</button>&nbsp;
+		<input id="newTask" type="text" placeholder="new task">&nbsp;
+		<button id="addTask" type="button" onclick="addTask()">Add Task to List</button>&nbsp;
+		<br/><br/>
+		<button id="checkAll" type="button" onclick="checkAll()">Check All</button>&nbsp;
+		<button id="uncheckAll" type="button" onclick="uncheckAll()">Uncheck All</button>&nbsp;
+		<button id="removeDone" type="button" onclick="removeDone()">Remove Done</button>
+    </div>
+    <br>
+    <div id="blend">
+        <h2>Using JS Objects for a Simple Game</h2>
+        <h3>ROCK PAPER SCISSORS</h3>
+        <div>
+            <hr>
+            <p>MAKE YOUR CHOICE</p>
+            <button type="button" id="rock" onclick="rock()">ROCK</button>
+            <button type="button" id="paper" onclick="paper()">PAPER</button>
+            <button type="button" id="scissors" onclick="scissors()">SCISSORS</button>
+        </div>
+        <div>
+            <p id="computer">The computer chose: <span id="choice"></span></p>
+            <p id="result"></p>
+            <br id="noResult" />
+        </div>
+        <div>
+            <h2 id="scores">
+                <span id="wins"></span>
+                <span id="ties"></span>
+                <span id="losses"></span>
+            </h2>
+        </div>
+        <div>
+            <hr>
+            <br/>
+            <button type="button" onclick="reload()">Reset Scores</button>
+            <p><i>Permanent scores/ratings/choices coming soon...</i></p>
+        </div>
+    </div>
+	<div id="dynamic">
+		<div class="calendar" id="calendar"></div> <!-- end calendar -->
+	</div>
+
+	<script src="js/cit261.js"></script>
+	<script type="text/javascript" src="js/render.js" ></script>
+<script>
+    document.getElementById('CIT261').onload = joesephInit(), reload(), getCalendar(), getTasks();
+</script>
+    <div id="footer"></div>
+  </body>
+</html>
